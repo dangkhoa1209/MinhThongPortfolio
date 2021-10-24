@@ -1,0 +1,716 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 1920px;
+    margin: auto;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 80px;
+    position: fixed;
+    border-bottom: 1px solid rgb(150, 150, 150);
+    transition: all 0.6s ease 0.1s;
+    background-color: black;
+    max-width: 1920px;
+    margin: auto;
+    transform: translateX(-50%);;
+}
+
+#header .logo {
+    margin-right: auto;
+    width: 150px;
+    max-width: 150px;
+
+}
+
+#header .img-logo {
+    width: 100%;
+}
+
+
+#header .nav__links {
+    list-style: none;
+    display: flex;
+    padding-top: 12px;
+}
+
+
+#header .nav__links a {
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+}
+
+#header .nav__links li {
+
+    text-align: center;
+}
+
+#header .nav__links li a {
+    transition: all 0.3s ease 0s;
+    font-size: 18px;
+
+}
+
+
+#header .nav__links li a:hover {
+    color: rgb(251, 145, 60);
+}
+
+#header .underline {
+    border-bottom: 2px solid rgb(251, 145, 60);
+}
+
+/* Edit About  */
+.editabout {
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+}
+
+.editabout .logo {
+    width: 40%;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.editabout .logo .boximage {
+    width: 90%;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: auto;
+    background-color: rgb(150, 150, 150);
+}
+
+.editabout .logo .boximage .image {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.editabout .logo #boximagenew {
+    display: none;
+}
+
+.editabout .logo .chooseimage {
+    padding: 20px 5px;
+    width: 90%;
+    margin: auto;
+}
+
+.editabout .logo .chooseimage form input[type="file"] {
+    display: none;
+}
+
+.editabout .logo .chooseimage form label {
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+.editabout .logo .chooseimage form label:hover {
+    cursor: pointer;
+}
+
+.editabout .logo .chooseimage form .savelogobtn {
+    text-align: center;
+}
+
+.editabout .logo .chooseimage form .savelogobtn button,
+.editabout .about .saveabout button {
+    padding: 7px 7px;
+    border: 1px solid black;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 4px;
+    background-color: black;
+    box-shadow: 0px 2px 3px black;
+    transition: all 0.6s ease 0.1s, transform 1.5s ease 0.4s;
+}
+
+.editabout .logo .chooseimage form .savelogobtn button:hover,
+.editabout .about .saveabout button:hover {
+    color: black;
+    background-color: white;
+
+}
+
+
+.editabout .about {
+    width: 60%;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.editabout .about .title,
+.editabout .about .content {
+    width: 90%;
+    margin: auto;
+}
+
+.editabout .about .title input {
+    box-sizing: border-box;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.editabout .about .content textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.editabout .about p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.editabout .about input,
+.editabout .about textarea {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.editabout .about .saveabout {
+    text-align: center;
+}
+
+/* Edit Banner  */
+.editbanner {
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+}
+
+.editbanner .banner {
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.editbanner .banner .boximageBanner {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.editbanner .banner .boximageBanner img,
+.editbanner .banner .boximageBanner video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.editbanner .banner .chooseimage {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.editbanner .banner .chooseimage label {
+    font-size: 16px;
+}
+
+.editbanner .banner .chooseimage label:hover {
+    cursor: pointer;
+}
+
+.editbanner .banner .chooseimage input[type="file"] {
+    display: none;
+}
+
+.editbanner .banner .chooseimage p {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.editbanner .banner .chooseimage textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.editbanner .banner .chooseimage .savebannerbtn {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.editbanner .banner .chooseimage button {
+    padding: 7px 7px;
+    border: 1px solid black;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 4px;
+    background-color: black;
+    box-shadow: 0px 2px 3px black;
+    transition: all 0.6s ease 0.1s, transform 1.5s ease 0.4s;
+}
+
+.editbanner .banner .chooseimage button:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Edit Portfolio  */
+.editportfolio {
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+}
+
+.editportfolio .a {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+
+}
+
+.editportfolio .a .a1 {
+    width: 60%;
+}
+
+.editportfolio .a .a1 .boxImagePortfolio {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.editportfolio .a .a1 .boxImagePortfolio img {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.editportfolio .a .a1 .boxImagePortfolio label {
+    padding: 5px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+.editportfolio .a .a2 {
+    width: 40%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.editportfolio .a .a2 p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.editportfolio .a .a2 input[type="file"] {
+    display: none;
+}
+
+.editportfolio .a .a2 input {
+    display: none;
+    box-sizing: border-box;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.editportfolio .a .a2 select {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+
+.editportfolio .a .a2 textarea {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.editportfolio .a .a2 .portfoliobtn {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.editportfolio .a .a2 .portfoliobtn button {
+    margin: 0px 30px;
+    padding: 7px 7px;
+    border: 1px solid black;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 4px;
+    background-color: black;
+    box-shadow: 0px 2px 3px black;
+    transition: all 0.6s ease 0.1s, transform 1.5s ease 0.4s;
+    outline: none;
+}
+
+.editportfolio .a .a2 .portfoliobtn button:hover {
+    color: black;
+    background-color: white;
+
+}
+
+.editportfolio .b {
+    padding-top: 20px;
+    width: 250px;
+    box-sizing: border-box;
+    padding: 5px;
+    border-left: 1px solid black;
+
+}
+
+.editportfolio .b .news {
+    width: 100%;
+    height: 120px;
+    padding-bottom: 5px;
+}
+
+.editportfolio .b .news .new {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(220, 220, 220);
+    border-radius: 5px;
+    box-sizing: margin-box;
+    padding: 5px;
+}
+
+.editportfolio .b .news .new:hover {
+    background-color: rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+.editportfolio .b .news .new:hover p {
+    font-size: 35px;
+}
+
+.editportfolio .b .news .new p {
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+
+}
+
+.editportfolio .b .images {
+    width: 100%;
+    height: 500px;
+    overflow: scroll;
+    border-radius: 5px;
+}
+
+.editportfolio .b .image {
+    width: 90%;
+    padding: 5px 0px;
+    margin: auto;
+}
+
+.editportfolio .b .image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.editportfolio .b .image img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+
+
+/* Edit News  */
+.editnew {
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+}
+
+.editnew .a {
+    width: 100%;
+    display: flex;
+}
+
+.editnew .a .a1 {
+    width: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.editnew .a .a1 img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.editnew .a .a2 {
+    padding: 20px 10px;
+    width: 40%;
+}
+
+.editnew .a .a2 p {
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.editnew .a .a2 select {
+    width: 100%;
+    font-size: 20px;
+}
+
+.editnew .a .a2 .editnewbtn {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.editnew .a .a2 input[type="file"]{
+	display: none;
+}
+
+.editnew .a .a2 .editnewbtn button {
+    margin: 0px 30px;
+    padding: 7px 7px;
+    border: 1px solid black;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 4px;
+    background-color: black;
+    box-shadow: 0px 2px 3px black;
+    transition: all 0.6s ease 0.1s, transform 1.5s ease 0.4s;
+    outline: none;
+}
+
+.editnew .a .a2 .editnewbtn button:hover{
+	color: black;
+    background-color: white;
+}
+
+.editnew .b{
+	width: 400px;
+    min-width: 400px;
+	border-left: 1px solid black;
+}
+
+.editnew .b .b1{
+
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5px;
+	display: flex;
+}
+
+.editnew .b .b1 .btnn{
+	width: 33.33%;
+	background-color: rgb(200, 200, 200);
+	height: 40px;
+	transition: all 0.4s ease;
+}
+
+.editnew .b .b1 .btnn p{
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 0px;
+}
+
+.editnew .b .b1 .btnn:hover{
+	background-color: rgb(150, 150, 150);
+	cursor: pointer;
+}
+
+.editnew .b .b2{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	padding: 5px;
+	height: 500px;
+	overflow: scroll;
+}
+
+.editnew .b .b2 .imagenews{
+	width: 50%;
+	box-sizing: border-box;
+	padding: 5px; 
+}
+
+.editnew .b .b2 .imagenews .newNews{
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(200, 200, 200);
+    height: 260px;
+    transition: all 0.4s ease;
+}
+
+.editnew .b .b2 .imagenews .newNews:hover{
+    background-color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+.editnew .b .b2 .imagenews .newNews:hover p{
+    font-size: 35px;
+}
+
+.editnew .b .b2 .imagenews .newNews p{
+    text-align: center;
+    font-size: 30px;
+    margin: 0px;
+    line-height: 260px;
+}
+
+.editnew .b .b2 .imagenews img{
+	width: 100%;
+	border-radius: 5px;
+}
+
+.editnew .b .b2 .imagenews img:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+
+.information{
+    padding: 80px;
+    width: 100%;
+}
+
+.information .boxinfo{
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+
+.information .boxinfo .a{
+    width: 45%;
+    margin: auto;
+}
+
+.information .boxinfo .b{
+    width: 45%;
+    margin: auto;
+
+}
+
+.information .boxinfo .a h5,
+.information .boxinfo .b h5{
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.information .boxinfo .a p,
+.information .boxinfo .b p{
+    font-size: 16px;
+}
+
+.information .boxinfo .a input,
+.information .boxinfo .b input{
+    box-sizing: border-box;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.information .boxbutton{
+    margin: auto;
+    text-align: center;
+}
+.information .boxbutton button{
+    margin: 10px 30px;
+    padding: 7px 7px;
+    border: 1px solid black;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 4px;
+    background-color: black;
+    box-shadow: 0px 2px 3px black;
+    transition: all 0.6s ease 0.1s, transform 1.5s ease 0.4s;
+    outline: none;
+    margin: auto;
+}
+
+.information .boxbutton button:hover{
+    color: black;
+    background-color: white;
+}
+
+.reset {
+    padding: 80px;
+    width: 100%;
+}
+
+.reset .a{
+    padding: 200px;
+}
+
+.reset .a .a1{
+    margin: auto;
+    text-align: center;
+}
+
+.reset .a .a1 button{
+    margin: 10px 30px;
+    padding: 7px 7px;
+    border: 1px solid black;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 4px;
+    background-color: black;
+    box-shadow: 0px 2px 3px black;
+    transition: all 0.6s ease 0.1s, transform 1.5s ease 0.4s;
+    outline: none;
+    margin: auto;
+}
+
+.reset .a .a1 button:hover{
+    color: black;
+    background-color: white;
+}

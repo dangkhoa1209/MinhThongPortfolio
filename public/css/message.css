@@ -1,0 +1,458 @@
+html,
+body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#index {
+    width: 100%;
+}
+
+#index .userchat {
+    float: left;
+    width: 300px;
+    background-color: white;
+    border-right: 0.5px solid rgb(180, 180, 180, 0.5);
+}
+
+#index .userchat .nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#index .userchat .nav .a {
+    float: left;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#index .userchat .nav .b {
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+
+}
+
+#index .userchat .nav .b .b1 {
+    width: 25px;
+    height: 100%;
+    margin: auto;
+    border-radius: 50%;
+
+
+}
+
+#index .userchat .nav .b .b1 i {
+    margin: auto;
+    float: left;
+    width: 20%;
+    color: black;
+    padding-left: 4px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+
+
+}
+
+#index .userchat .find {
+    width: 90%;
+    margin: auto;
+    background-color: rgb(240, 240, 240);
+    padding: 8px 15px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#index .userchat .find:hover {
+    cursor: text;
+}
+
+#index .userchat .find .a .a1 {
+    width: 10%;
+    float: left;
+    height: 100%;
+}
+
+#index .userchat .find .a .a1 i {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    color: rgb(169, 169, 169);
+}
+
+#index .userchat .find .a input {
+    float: left;
+    width: 85%;
+    padding: none;
+    background: none;
+    border: none;
+    outline: none;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+#index .userchat .users {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+#index .userchat .users .user {
+    padding: 5px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#index .userchat .users .user:hover {
+    background-color: rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+#index .userchat .users .user h5 {
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+#index .userchat .users .user .username h5 {
+    font-size: 17px;
+    font-weight: 400px;
+    margin: 3px;
+}
+
+#index .userchat .users .user .contentandtime {
+    width: 100%;
+}
+
+#index .userchat .users .user .contentandtime .content {
+    width: 100%;
+}
+
+#index .userchat .users .user .contentandtime .content p {
+    width: 100%;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    margin: 3px;
+}
+
+/*tin nhắn chưa xem*/
+.notseen{
+    font-weight: 600;
+}
+
+#index .userchat .users .user .contentandtime .time {
+    width: 100%;
+    text-align: right;
+    font-weight: 300;
+}
+
+
+#index .boxchat {
+    float: left;
+}
+
+#index .boxchat .name {
+    width: 100%;
+    padding: 25px 0px;
+    border-bottom: 1px solid rgb(150, 150, 150, 0.5);
+    border-radius: 5px;
+}
+
+#index .boxchat .name h5 {
+    margin: 0px;
+    padding: 0px 15px;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+#index .boxchat .content-chat {
+    width: 100%;
+    height: 320px;
+    overflow-y: scroll;
+    padding: 0px 6px;
+    vertical-align: top;
+    overflow-y: auto;
+}
+
+#index .boxchat .content-chat .time{
+    width: 100%;
+}
+
+#index .boxchat .content-chat .time p{
+    color: rgb(150, 150, 150);
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#index .boxchat .content-chat .right .image {
+    width: 60%;
+    float: right;
+}
+
+
+#index .boxchat .content-chat .left .image {
+    width: 60%;
+    float: left;
+}
+
+
+#index .boxchat .content-chat .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#index .boxchat .content-chat .right .file {
+    width: 60%;
+    float: right;
+}
+
+
+#index .boxchat .content-chat .left .file {
+    width: 60%;
+    float: left;
+}
+
+
+#index .boxchat .content-chat .file a {
+    width: 100%;
+
+}
+
+
+#index .boxchat .content-chat .left {
+    width: 100%;
+    border-radius: 5px;
+    float: left;
+    margin: 0px 0px 8px;
+}
+
+#index .boxchat .content-chat .left p {
+    float: left;
+    color: black;
+    background-color: rgb(240, 240, 240);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 1px;
+    max-width: 75%;
+    word-wrap: break-word;
+}
+
+#index .boxchat .content-chat .right {
+    width: 100%;
+    float: right;
+    border-radius: 5px;
+    margin: 0px 0px 8px;
+}
+
+#index .boxchat .content-chat .right p {
+    float: right;
+    color: black;
+    background-color: rgb(251, 145, 60);
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0px;
+    max-width: 75%;
+    word-wrap: break-word;
+}
+
+#index .input-chat {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 5px;
+    display: flex;
+    border-top: 0.1px solid black;
+    margin-top: 1px;
+}
+
+#index .input-chat input[type="file"] {
+    display: none;
+}
+
+
+#index .input-chat .item-chat {
+    margin: auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: rgb(40, 40, 40);
+    transition: all 0.3s ease;
+    padding: 0px 5px;
+}
+
+
+#index .input-chat .item-chat:hover {
+    color: rgb(251, 145, 60);
+    cursor: pointer;
+}
+
+#index .input-chat textarea {
+    border: none;
+    width: 100%;
+    padding: 7px 12px;
+    border-radius: 26px;
+    background-color: rgb(240, 240, 240);
+    word-wrap: break-word;
+    resize: none;
+    overflow: auto;
+    outline: none;
+}
+
+#index .input-chat .send-chat {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: rgb(251, 145, 60);
+    transition: all 0.3s ease;
+    padding: 0px 5px;
+}
+
+#index .input-chat .send-chat:hover {
+    cursor: pointer;
+}
+
+
+
+#index .infousers {
+    float: left;
+    width: 370px;
+    box-sizing: border-box;
+    background-color: rgb(240, 245, 245);
+
+}
+
+#index .infousers .infouser {
+    padding: 10px 10px;
+}
+
+#index .infousers .infouser h5 {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: 400px;
+    overflow: hidden;
+
+}
+
+#index .infousers .infouser p {
+    text-align: center;
+    overflow: hidden;
+}
+
+#index .imageandfile {
+    width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    display: flex;
+}
+
+
+#index .infousers .imageandfile .file-btn,
+#index .infousers .imageandfile .image-btn {
+    width: 50%;
+    text-align: center;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    background-color: rgb(200, 200, 200);
+}
+
+#index .infousers .imageandfile .file-btn:hover,
+#index .infousers .imageandfile .image-btn:hover {
+    background-color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+
+#index .infousers .imageandfile .file-btn p,
+#index .infousers .imageandfile .image-btn p {
+    margin: 0px;
+}
+
+/*image*/
+#index .infousers .images {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 10px;
+    overflow-y: scroll;
+    display: none;
+    align-items: baseline;
+}
+
+#index .infousers .images .image {
+	width: 33.33%;
+    min-width: 33.33%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0px;
+
+}
+
+
+#index .infousers .images p{
+	font-size: 15px;
+	font-weight: 400;
+	width: 100%;
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+#index .infousers .images .image .img-box{
+	box-sizing: border-box;
+	padding: 3px;
+}
+#index .infousers .images .image .img-box img{
+	width: 100%;
+	border-radius: 5px;
+	max-height: 220px;
+	overflow: hidden;
+}
+
+/* files */
+#index .infousers .files{
+	display: none;
+	overflow-y: scroll;
+	padding: 0px 10px;
+}
+
+#index .infousers .files p{
+	margin: 0px;
+}
+
+#index .infousers .files .file{
+	background-color: white;
+	border-radius: 8px;
+	padding: 10px 10px;
+	box-sizing: border-box;
+	margin: 10px 0px;
+
+}
+
+#index .infousers .files .file p{
+	word-wrap: break-word;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #index .infousers {
+        display: none;
+    }
+}

@@ -1,0 +1,2278 @@
+/*reset css*/
+
+.owl-prev button {
+    background-color: white;
+    color: white;
+}
+
+.owl-carousel .item img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    background-color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(5, 5, 5);
+    box-sizing: border-box;
+}
+
+.index {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+.header {
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition: all 0.6s ease 0s;
+}
+
+.header .boxheader {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    padding: 20px 246px;
+    justify-content: space-between;
+    transition: all 0.6s ease 0s;
+}
+
+.header .boxheader img {
+    width: 200px;
+    max-width: 200px;
+}
+
+.header .boxheader nav {
+    margin: 0px;
+}
+
+.header .boxheader .header-links {
+    margin: 0px;
+    display: flex;
+    list-style-type: none;
+
+}
+
+.header .boxheader .header-links p {
+    margin: 0px;
+    font-family: 'Poppins-Bold';
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    vertical-align: middle;
+    text-overflow: clip;
+    white-space: nowrap;
+    line-height: 67px;
+    transition: 0.3s ease;
+}
+
+.header .boxheader .header-links a.linkHeaderActive p{
+    color: rgb(244, 146, 56);
+}
+
+.header .boxheader .header-links p:hover,
+.header .boxheader p:hover {
+    color: rgb(244, 146, 59);
+}
+
+.header .boxheader .header-links .menu_down {
+    list-style-type: none;
+    position: absolute;
+    background-color: black;
+    top: 100px;
+    right: 80px;
+    transition: all 0.6s ease 0.1s;
+    color: black;
+    border-radius: 10px;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    border: 0.5px solid rgb(200, 200, 200);
+}
+
+.header .boxheader .header-links .menu_down p{
+    padding: 0px 15px;
+    line-height: 40px;
+}
+
+.header .boxheader p {
+    margin: 0px;
+    font-family: 'Poppins-Bold';
+    font-size: 14pt;
+    text-transform: uppercase;
+    color: white;
+    line-height: 67px;
+    padding: 0px;
+}
+
+.header .boxheader .header-links li {
+    padding: 0px 20px;
+}
+
+.header .boxheader .header-links li a {
+    text-decoration: none;
+}
+
+
+/*End header*/
+
+
+/* Mobile Nav */
+#mobile__menu {
+    z-index: 100;
+    opacity: 1;
+}
+
+.cta {
+    margin-left: 20px;
+    padding: 0px 25px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.cta i {
+    font-size: 20px;
+    color: white;
+}
+
+.cta:hover {
+    color: rgb(255, 146, 59);
+}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: 0.3s ease;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+.overlay__content {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a.close {
+    font-size: 30px;
+    display: block;
+    transition: 0.3s ease;
+    color: rgb(67, 66, 68);
+}
+
+.overlay a.close:hover {
+    color: rgb(251, 145, 60)
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.overlay .overlay__content a {
+    color: rgb(67, 66, 68);
+    padding: 10px;
+    font-size: 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-family: 'Poppins-Bold';
+    text-transform: uppercase;
+}
+
+.overlay .overlay__content a.linkHeaderActive{
+    color: rgb(251, 145, 60);
+}
+
+.overlay .overlay__content a:hover {
+    color: rgb(251, 145, 60);
+}
+
+/*End Mobile Nav */
+
+/*Banner*/
+.banner {
+    width: 100%;
+}
+
+.banner .boxbanner {
+    padding: 0px;
+    overflow: hidden;
+    transition: all 0.6s ease 0.1s;
+    background-color: white;
+    height: auto;
+    margin: 0px;
+}
+
+.banner .boxbanner img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+}
+
+.banner .boxbanner video{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*End Banner*/
+
+/*About*/
+.about {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    padding: 0px 246px;
+    flex-wrap: wrap;
+    transition: all 0.6s ease 0s;
+}
+
+.about .titleAbout {
+    width: 45%;
+}
+
+.about .titleAbout .boxtitleAbout {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about .titleAbout .boxtitleAbout .a .line {
+    width: 2px;
+    height: 140px;
+    background-color: rgb(244, 146, 56);
+    box-sizing: border-box;
+    margin-left: 50px;
+}
+
+.about .titleAbout .boxtitleAbout .a p {
+    font-size: 140px;
+    font-family: Poppins-SemiBold;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(244, 146, 56);
+    line-height: 73pt;
+}
+
+
+.about .titleAbout .boxtitleAbout .b p {
+    color: rgb(89, 89, 92);
+    font-family: Poppins-SemiBold;
+    font-size: 50px;
+    margin: 0px;
+    padding-top: 181px;
+}
+
+
+.about .contentAbout {
+    width: 55%;
+    padding: 75px 0px;
+}
+
+.about .contentAbout p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.about .contentAbout p.a {
+    font-size: 20px;
+    color: rgb(244, 146, 56);
+}
+
+.about .contentAbout p.b {
+    font-size: 20px;
+    color: rgb(89, 89, 92);
+    font-family: "Poppins-Light";
+    padding: 17px 0px;
+    text-align: justify;
+}
+
+.about .contentAbout p.c {
+    font-size: 20px;
+    color: rgb(244, 146, 56);
+    font-family: "Poppins-MediumItalic";
+}
+
+/*End About*/
+
+
+/*Services*/
+.services {
+    width: 100%;
+    background-color: rgb(67, 66, 68);
+    padding: 80px 0px;
+}
+
+.services .boxservices {
+    padding: 0px 246px;
+    transition: all 0.6s ease 0s;
+}
+
+.services .boxservices .title {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.services .boxservices .title p {
+    font-size: 50px;
+    font-family: "Poppins-SemiBold";
+    color: white;
+}
+
+.services .boxservices .boxicon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services .boxservices .boxicon .a,
+.services .boxservices .boxicon .b,
+.services .boxservices .boxicon .c {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 0px 15px;
+    margin: 30px 0px;
+    padding: 20px 0px;
+    transition: all 0.5s ease;
+}
+
+.services .boxservices .boxicon .a:hover,
+.services .boxservices .boxicon .b:hover,
+.services .boxservices .boxicon .c:hover{
+    background-color: rgb(100, 100, 100);
+}
+
+
+.services .boxservices .boxicon .boximage img {
+    display: block;
+    margin: auto;
+    width: 90px;
+    max-width: 90px;
+}
+
+.services .boxservices .boxicon .a p.titleIcon,
+.services .boxservices .boxicon .b p.titleIcon,
+.services .boxservices .boxicon .c p.titleIcon {
+    font-size: 30px;
+    color: rgb(244, 146, 59);
+    text-align: center;
+    font-family: "Poppins-SemiBold";
+    margin-top: 20px;
+}
+
+.services .boxservices .boxicon .a hr,
+.services .boxservices .boxicon .b hr,
+.services .boxservices .boxicon .c hr {
+    width: 25%;
+    background-color: white;
+    height: 2px;
+    margin: auto;
+}
+
+.services .boxservices .boxicon .a p.contentIcon,
+.services .boxservices .boxicon .b p.contentIcon,
+.services .boxservices .boxicon .c p.contentIcon {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    font-family: "Poppins-Medium";
+    margin: 0px;
+    margin-top: 20px;
+}
+
+/*End services*/
+
+/*Kind portfolio*/
+.portfolio {
+    width: 100%;
+    background-color: white;
+    padding: 80px 0px;
+}
+
+.portfolio .boxTitlePort {
+    padding: 0px 246px;
+}
+
+.portfolio .boxTitlePort p {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Poppins-SemiBold";
+    color: rgb(89, 89, 92);
+    text-transform: uppercase;
+}
+
+.portfolio .boxTitlePort .kindPorts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.portfolio .boxTitlePort .kindPorts button {
+    font-size: 22px;
+    line-height: 26px;
+    font-family: "Poppins-Regular";
+    text-align: center;
+    color: rgb(89, 89, 92);
+    background-color: white;
+    padding: 9px 24px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid rgb(89, 89, 91);
+    margin: 7px;
+
+}
+
+.portfolio .boxTitlePort .kindPorts button:hover {
+    cursor: pointer;
+    background-color: rgb(244, 146, 59);
+    color: white;
+    border-color: rgb(244, 146, 59);
+}
+
+.portfolio .boxTitlePort .kindPorts button.kindPortActive{
+    background-color: rgb(244, 156, 59);
+    border-color: rgb(244, 146, 59);
+    color: white;
+}
+
+
+.portfolio .boxContentPort {
+    width: 100%;
+    padding-top: 20px;
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .vongcung {
+    height: 120px;
+    max-width: 2300px;
+    margin: auto;
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    background-color: white;
+    position: absolute;
+    top: -61px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .boxDivLeftRight {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .divleft {
+    height: 800px;
+    background-color: rgb(67, 66, 68);
+    width: 200px;
+    z-index: 2;
+    border: none;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .divright {
+    height: 800px;
+    background-color: rgb(67, 66, 68);
+    width: 200px;
+    z-index: 2;
+    border: none;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .vongcung2 {
+    height: 120px;
+    width: 2500px;
+    max-width: 2300px;
+    margin: auto;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    background-color: white;
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .owl-carousel {
+    width: 100%;
+    max-width: 1920px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    border-bottom: none;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-stage-outer {
+    background-color: white;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .owl-carousel .item {
+    width: 100%;
+    max-width: 100%;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .owl-carousel .item img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-prev,
+.portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    outline: none;
+    background-color: white;
+    margin: 30px 10px;
+}
+
+.portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-prev img,
+.portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-next img {
+    width: 100%;
+}
+
+.portfolio .buttonAllProjects {
+    width: 100%;
+}
+
+.portfolio .buttonAllProjects a {
+    text-decoration: none;
+}
+
+.portfolio .buttonAllProjects a button {
+    width: 280px;
+    height: 95px;
+    background-color: rgb(67, 66, 68);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    display: block;
+    margin: auto;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Poppins-SemiBold";
+}
+
+
+.portfolio .buttonAllProjects a button:hover {
+    background-color: rgb(244, 156, 59);
+}
+
+.portfolio .buttonAllProjects
+/*End Portfolio*/
+
+/*News*/
+.news {
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+
+}
+
+.news .boxNews {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.news .boxNews img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.news .boxNews img.imageBackgroundTmp {
+    opacity: 0;
+    max-width: 1920px;
+}
+
+.news .boxNews img.imageBackground {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    max-width: 1920px;
+}
+
+.news .boxNews .boxNewsAndPromotion {
+    padding: 0px 23.25%;
+    padding-right: 22.97%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 26.46%;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.news .boxNews .boxNewsAndPromotion .boxImageNews,
+.news .boxNews .boxNewsAndPromotion .boxImagePromotion {
+    width: 42.8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.news .boxNews .boxNewsAndPromotion .btnleft,
+.news .boxNews .boxNewsAndPromotion .btnright {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.news .boxNews .glyphicon{
+    display: none;
+}
+.news .boxNews .boxNewsAndPromotion .carousel-control {
+    z-index: 3;
+}
+
+.news .boxNews .boxNewsAndPromotion .boxImageNews img,
+.news .boxNews .boxNewsAndPromotion .boxImagePromotion img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    z-index: 1;
+}
+
+.news .boxNews .boxNewsAndPromotion .boxImagePromotion {
+    margin-left: 10px;
+}
+
+/*End news*/
+
+
+/*Contact*/
+.contact {
+    width: 100%;
+    background-color: white;
+    padding: 80px 0px;
+}
+
+.contact .boxContact {
+    padding: 0px 446px;
+    transition: all 0.6s ease 0s;
+}
+
+.contact .boxContact p {
+    font-family: "Poppins-SemiBold";
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(89, 89, 92);
+    padding-bottom: 50px;
+}
+
+.contact .boxContact .resultSendInfoUser p{
+    color: rgb(244, 146, 59);
+    font-size: 25px;
+    text-transform: none;
+}
+
+.contact .boxContact input {
+    width: 100%;
+    font-family: "Poppins-Regular";
+    font-size: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(89, 89, 92);
+    background: none;
+    color: rgb(89, 89, 92);
+    margin-bottom: 50px;
+}
+
+.contact .boxContact input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(89, 89, 92);
+    ;
+    opacity: 1;
+    /* Firefox */
+}
+
+.contact .boxContact input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: red;
+}
+
+.contact .boxContact input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: red;
+}
+
+
+.contact .boxContact .boxBtn button {
+    margin: auto;
+    display: block;
+    color: white;
+    background-color: rgb(67, 66, 68);
+    padding: 15px 70px;
+    font-size: 25px;
+    font-family: "Poppins-SemiBold";
+    border-radius: 15px;
+    outline: none;
+    margin-top: 50px;
+    border: none;
+}
+
+.contact .boxContact .boxBtn button:hover {
+    background-color: rgb(244, 146, 59);
+}
+
+/*End contact*/
+
+/*Footer*/
+.footer {
+    background-color: rgb(67, 66, 68);
+    padding: 80px 0px;
+}
+
+.footer .boxFooter {
+    padding: 0px 246px;
+}
+
+.footer .boxFooter .boxFooter1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer .boxFooter .boxFooter1 .image .boxImageLogo {
+    width: 200px;
+    margin-right: 100px;
+}
+
+.footer .boxFooter .boxFooter1 .image .boxImageLogo img {
+    width: 100%;
+}
+
+.footer .boxFooter1 .content {
+    padding-top: 30px;
+    width: 100%;
+}
+
+.footer .boxFooter1 .content .boxContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .boxFooter1 .content .boxContent p.title {
+    font-family: "Poppins-Bold";
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.footer .boxFooter1 .content .boxContent p.content {
+    font-family: "Poppins-Medium";
+    font-size: 20px;
+    color: white;
+    padding: 0px;
+}
+
+.footer .boxFooter1 .content .boxContent p.linkFooter:hover{
+    cursor: pointer;
+    color: rgb(244, 146, 59);
+}
+
+
+.footer .boxFooter1 .content .boxContent .footerAbout,
+.footer .boxFooter1 .content .boxContent .footerServices,
+.footer .boxFooter1 .content .boxContent .footerPortfolio,
+.footer .boxFooter1 .content .boxContent .footerNews,
+.footer .boxFooter1 .content .boxContent .footerContact {
+    margin-bottom: 30px;
+}
+
+
+.footer .boxFooter hr {
+    size: 2px;
+    background-color: white;
+    margin-top: 50px;
+}
+
+.footer .boxFooter2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .boxFooter2 .content1 p,
+.footer .boxFooter2 .content2 p {
+    color: white;
+    font-family: "Poppins-Regular";
+    font-size: 20px;
+}
+
+
+/*End Footer*/
+
+/*Lien He*/
+.lienhe1,
+.lienhe2,
+.lienhe3,
+.closeListLienhe {
+    width: 70px;
+    height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    position: absolute;
+    z-index: 11;
+    bottom: 42px;
+    right: 35px;
+    position: fixed;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.ring1 {
+    position: fixed;
+    bottom: 42px;
+    right: 35px;
+    width: 70px;
+    height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 50%;
+    background-color: rgb(244, 146, 59, 0.5);
+    animation-name: ring1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    z-index: 11;
+}
+
+.ring2 {
+    position: fixed;
+    bottom: 42px;
+    right: 35px;
+    width: 70px;
+    height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 50%;
+    background-color: rgb(244, 146, 59, 0);
+    border: 1px solid rgb(244, 146, 59);
+    transform: scale(2);
+    animation-name: ring2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    z-index: 11;
+}
+
+@keyframes ring1 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ring2 {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+
+    49.99% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.closeListLienhe {
+    display: none;
+}
+
+.closeStartChat,
+.miniChat {
+    width: 70px;
+    height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    position: absolute;
+    z-index: 11;
+    bottom: 42px;
+    right: 125px;
+    position: fixed;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.2s;
+    display: none;
+    background-color: rgb(244, 146, 59);
+}
+
+.lienhe1 .boxLienhe1 {
+    opacity: 1;
+    z-index: 10;
+}
+
+.lienhe2 .boxLienhe2 {
+    opacity: 0;
+    z-index: 11;
+}
+
+.lienhe3 .boxLienhe3 {
+    display: flex;
+    opacity: 0;
+    z-index: 10;
+    transition: transform 0.6s;
+    background-color: white;
+}
+
+.closeListLienhe .boxCloseListLienhe {
+    z-index: 10;
+}
+
+.closeStartChat .boxCloseStartChat,
+.miniChat .boxMiniChat {
+    z-index: 10;
+}
+
+.lienhe1 .boxLienhe1 img {
+    width: 100%;
+    z-index: 10;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.lienhe2 .boxLienhe2 img {
+    width: 100%;
+    z-index: 11;
+    object-fit: cover;
+    object-position: 50% 50%;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.lienhe3 .boxLienhe3 img {
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: 50% 50%;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.closeListLienhe .boxCloseListLienhe img,
+.closeStartChat .boxCloseStartChat img,
+.miniChat .boxMiniChat img {
+    width: 100%;
+
+    z-index: 10;
+    background-color: white;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.lienhe1 .boxLienhe1 img:hover,
+.lienhe2 .boxLienhe2 img:hover,
+.lienhe3 .boxLienhe3 img:hover,
+.closeListLienhe .boxCloseListLienhe img:hover,
+.closeStartChat .boxCloseStartChat img:hover,
+.miniChat .boxMiniChat img:hover {
+    cursor: pointer;
+}
+
+/*End Lien He*/
+
+/*List Lien He*/
+.listLienhe {
+    background-color: rgb(67, 66, 68);
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 11px 0px;
+    position: fixed;
+    bottom: 130px;
+    right: 35px;
+    z-index: 9;
+    display: none;
+}
+
+.listLienhe .boxListLienhe1,
+.listLienhe .boxListLienhe2,
+.listLienhe .boxListLienhe3,
+.listLienhe .boxListLienhe4 {
+    display: flex;
+    padding: 6px 10px;
+}
+
+.listLienhe .boxListLienhe1 .icon,
+.listLienhe .boxListLienhe2 .icon,
+.listLienhe .boxListLienhe3 .icon,
+.listLienhe .boxListLienhe4 .icon {
+    width: 45px;
+    height: 45px;
+}
+
+.listLienhe .boxListLienhe1 .icon img,
+.listLienhe .boxListLienhe2 .icon img,
+.listLienhe .boxListLienhe3 .icon img,
+.listLienhe .boxListLienhe4 .icon img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.listLienhe .boxListLienhe1 .content p,
+.listLienhe .boxListLienhe2 .content p,
+.listLienhe .boxListLienhe3 .content p,
+.listLienhe .boxListLienhe4 .content p {
+    padding-left: 10px;
+    padding-right: 34px;
+    font-family: "Poppins-Medium";
+    font-size: 15px;
+    color: rgb(244, 146, 59);
+    margin: 0px;
+    line-height: 18px;
+    padding-top: 4px;
+}
+
+.listLienhe .boxListLienhe4 .content p {
+    line-height: 40px;
+}
+
+.listLienhe .boxListLienhe1:hover,
+.listLienhe .boxListLienhe2:hover,
+.listLienhe .boxListLienhe3:hover,
+.listLienhe .boxListLienhe4:hover {
+    background-color: rgb(232, 232, 232);
+    cursor: pointer;
+}
+
+/*End list Lien He*/
+
+
+/*Get info chat and form chat*/
+/*right: 380px;*/
+.formchat {
+    width: 350px;
+    height: 460px;
+    border: 1px solid rgb(244, 146, 59);
+    border-radius: 10px;
+    background-color: white;
+    position: fixed;
+    bottom: 130px;
+    right: 125px;
+    z-index: 10;
+    transition: all 0.2s;
+    display: none;
+}
+
+.formchat .headerChat {
+    height: 54px;
+    background-color: rgb(244, 146, 59);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    width: 100%;
+}
+
+.formchat .headerChat p.title {
+    color: white;
+    font-family: "Poppins-Medium";
+    font-size: 18px;
+    line-height: 54px;
+    padding: 0px 18px;
+    display: inline;
+}
+
+.formchat .headerChat p.closeChat {
+    color: white;
+    font-size: 30px;
+    line-height: 45px;
+    padding: 0px 18px;
+    display: inline;
+    float: right;
+    display: none;
+}
+
+.formchat .headerChat p.closeChat i:hover {
+    cursor: pointer;
+}
+
+.formchat .contentChat {
+    background-color: white;
+    overflow-x: scroll;
+    height: 342px;
+}
+
+.formchat .contentChat p.getInfoChat {
+    text-align: center;
+    font-size: 15px;
+    font-family: "Poppins-Medium";
+    margin-top: 30px;
+}
+
+.formchat .contentChat input.getInfoChat {
+    width: 80%;
+    display: block;
+    margin: auto;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid rgb(170, 170, 170);
+    padding: 0px 20px;
+    font-size: 15px;
+    font-family: "Poppins-Regular";
+    margin-top: 30px;
+    outline: none;
+}
+
+.formchat .contentChat input.getInfoChat::placeholder {
+    font-size: 15px;
+    font-family: "Poppins-Regular";
+    color: rgb(170, 170, 170);
+}
+
+.formchat .contentChat button.getInfoChat {
+    width: 80%;
+    height: 50px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(244, 146, 59);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins-Bold";
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.formchat .contentChat {
+    width: 100%;
+    height: 350px;
+    padding: 0px 18px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    vertical-align: top;
+    overflow-y: auto;
+
+}
+
+.formchat .contentChat .left {
+    width: 100%;
+    border-radius: 5px;
+    float: left;
+    margin: 0px 0px 8px;
+}
+
+.formchat .contentChat .left p.content {
+    float: left;
+    color: black;
+    background-color: rgb(240, 240, 240);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0px;
+    max-width: 70%;
+    text-align: justify;
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+    word-wrap: break-word;
+}
+
+.formchat .contentChat .right {
+    width: 100%;
+    float: right;
+    border-radius: 5px;
+    margin: 0px 0px 8px;
+}
+
+.formchat .contentChat .right p.content {
+    float: right;
+    color: black;
+    background-color: rgb(251, 145, 60);
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0px;
+    max-width: 70%;
+    text-align: justify;
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+    word-wrap: break-word;
+}
+
+.formchat .contentChat .time{
+    width: 100%;
+    float: center;
+    border-radius: 5px;
+    margin: 0px 0px 8px;
+    padding: 5px 10px;
+}
+
+.formchat .contentChat .time p{
+    font-size: 10px;
+    font-family: "Poppins-Regular";
+    text-align: center;
+    color: rgb(140, 140, 140);
+    word-wrap: break-word;
+}
+
+
+.formchat .contentChat .right .image-chat {
+    width: 70%;
+    float: right;
+}
+
+.formchat .contentChat .left .image-chat {
+    width: 70%;
+    float: left;
+}
+
+.formchat .contentChat .right .image-chat img,
+.formchat .contentChat .left .image-chat img {
+    width: 100%;
+    border-radius: 5px;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+
+.formchat .input-chat {
+    box-sizing: border-box;
+    padding: 8px 5px;
+    display: flex;
+}
+
+.formchat .input-chat input[type="file"] {
+    display: none;
+}
+
+.formchat .input-chat textarea {
+    border: none;
+    width: 100%;
+    height: 41px;
+    padding: 7px 18px;
+    border-radius: 20px;
+    background-color: rgb(240, 240, 240);
+    word-wrap: break-word;
+    resize: none;
+    overflow: auto;
+    outline: none;
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.formchat .input-chat img.ghim {
+    width: 22px;
+    height: 23px;
+    margin: 8px 5px;
+}
+
+.formchat .input-chat img.send {
+    width: 25px;
+    height: 21px;
+    margin: 9px 5px;
+}
+
+.formchat .input-chat img.ghim:hover,
+.formchat .input-chat img.send:hover {
+    cursor: pointer;
+}
+
+/*End get info chat and form chat*/
+
+
+/*Modal*/
+/*Modal get info*/
+.modal input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+}
+
+.modal {
+    padding-top: 200px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.modal .close-modal {
+    padding: 7px 12px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 17px;
+    font-weight: 300px;
+    background-color: rgb(240, 240, 240);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    font-family: "Poppins-Regular";
+}
+
+
+.modal .modal-footer {
+    height: 80px;
+}
+
+.modal .btnlogin{
+    padding: 7px 12px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 17px;
+    font-weight: 300px;
+    background-color: rgb(245, 146, 58);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    font-family: "Poppins-Regular";
+}
+
+
+@media screen and (max-width: 1919px) {
+
+    .services .boxservices .title p,
+    .contact .boxContact p,
+    .portfolio .boxTitlePort p {
+        font-size: 45px;
+    }
+
+
+    .services .boxservices .boxicon .a p.titleIcon,
+    .services .boxservices .boxicon .b p.titleIcon,
+    .services .boxservices .boxicon .c p.titleIcon {
+        font-size: 25px;
+
+    }
+
+    .services .boxservices .boxicon .a p.contentIcon,
+    .services .boxservices .boxicon .b p.contentIcon,
+    .services .boxservices .boxicon .c p.contentIcon {
+        font-size: 20px;
+
+    }
+
+    .services .boxservices .boxicon .boximage img {
+        width: 80px;
+    }
+
+    .portfolio .buttonAllProjects a button {
+        width: 250px;
+        height: 85px;
+        border-radius: 8px;
+        font-size: 28px;
+    }
+
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-prev,
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-next {
+        width: 45px;
+        height: 45px;
+        margin: 35px 10px;
+    }
+
+    .contact .boxContact input {
+        font-size: 20px;
+        margin-bottom: 45px;
+    }
+
+    .contact .boxContact .resultSendInfoUser p{
+        font-size: 20px;
+    }
+
+    .contact .boxContact .boxBtn button {
+        padding: 14px 65px;
+        font-size: 23px;
+        border-radius: 14px;
+        margin-top: 45px;
+
+    }
+
+    .footer .boxFooter .boxFooter1 {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media screen and (max-width: 1279px) {
+
+    .services .boxservices .title p,
+    .contact .boxContact p,
+    .portfolio .boxTitlePort p {
+        font-size: 40px;
+    }
+
+    .services .boxservices .title {
+        padding-bottom: 30px;
+    }
+
+    .services .boxservices .boxicon .a p.titleIcon,
+    .services .boxservices .boxicon .b p.titleIcon,
+    .services .boxservices .boxicon .c p.titleIcon {
+        font-size: 23px;
+        margin-top: 15px;
+    }
+
+    .services .boxservices .boxicon .a p.contentIcon,
+    .services .boxservices .boxicon .b p.contentIcon,
+    .services .boxservices .boxicon .c p.contentIcon {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .services .boxservices .boxicon .boximage img {
+        width: 70px;
+    }
+
+    .portfolio .buttonAllProjects a button {
+        width: 230px;
+        height: 75px;
+        border-radius: 8px;
+        font-size: 25px;
+    }
+
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-prev,
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-next {
+        width: 45px;
+        height: 45px;
+        margin: 35px 10px;
+    }
+
+
+
+    .contact .boxContact input {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .contact .boxContact .resultSendInfoUser p{
+        font-size: 18px;
+    }
+
+    .contact .boxContact .boxBtn button {
+        padding: 13px 60px;
+        font-size: 22px;
+        border-radius: 13px;
+        margin-top: 45px;
+
+    }
+
+
+    .portfolio .boxTitlePort .kindPorts button {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 7px 20px;
+        margin: 5px;
+    }
+
+    .footer .boxFooter .boxFooter1 {
+        flex-wrap: wrap;
+    }
+
+    .footer .boxFooter1 .content .boxContent .footerAbout,
+    .footer .boxFooter1 .content .boxContent .footerServices,
+    .footer .boxFooter1 .content .boxContent .footerPortfolio,
+    .footer .boxFooter1 .content .boxContent .footerNews,
+    .footer .boxFooter1 .content .boxContent .footerContact {
+        width: 50%;
+    }
+
+    .footer .boxFooter1 .content .boxContent p.title,
+    .footer .boxFooter1 .content .boxContent p.content {
+        font-size: 18px;
+    }
+
+    .footer .boxFooter2 .content1 p,
+    .footer .boxFooter2 .content2 p {
+        font-size: 18px;
+    }
+
+    .footer .boxFooter .boxFooter1 .image .boxImageLogo {
+        width: 180px;
+    }
+
+
+}
+
+@media screen and (max-width: 1023px) {
+
+    .services .boxservices .title p,
+    .contact .boxContact p,
+    .portfolio .boxTitlePort p {
+        font-size: 35px;
+    }
+
+    .services .boxservices .title {
+        padding-bottom: 20px;
+    }
+
+    .services .boxservices .boxicon .a p.titleIcon,
+    .services .boxservices .boxicon .b p.titleIcon,
+    .services .boxservices .boxicon .c p.titleIcon {
+        font-size: 21px;
+
+    }
+
+    .services .boxservices .boxicon .a p.contentIcon,
+    .services .boxservices .boxicon .b p.contentIcon,
+    .services .boxservices .boxicon .c p.contentIcon {
+        font-size: 16px;
+
+    }
+
+    .services .boxservices .boxicon .boximage img {
+        width: 60px;
+    }
+
+    .header .boxheader .header-links {
+        display: none;
+    }
+
+    .header .boxheader img {
+        width: 130px;
+        max-width: 130px;
+    }
+
+    .header .boxheader p {
+        line-height: 41.27px;
+    }
+
+    .header .boxheader .menu {
+        display: initial;
+    }
+
+    .about .titleAbout,
+    .about .contentAbout {
+        width: 100%;
+    }
+
+    .about .contentAbout {
+        padding: 20px 0px;
+    }
+
+    .about .titleAbout .boxtitleAbout {
+        justify-content: center;
+    }
+
+    .about .contentAbout p.a,
+    .about .contentAbout p.b,
+    .about .contentAbout p.c {
+        font-size: 16pt;
+    }
+
+    .portfolio .buttonAllProjects a button {
+        width: 170px;
+        height: 55px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-prev,
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-next {
+        width: 40px;
+        height: 40px;
+        margin: 30px 10px;
+    }
+
+    .news .boxNews img {
+        width: 157.7%;
+        transform: translateX(-18.4%);
+    }
+
+    .news .boxNews .boxNewsAndPromotion {
+        padding: 0px 7%;
+        padding-right: 6.5%;
+        top: 26.46%;
+    }
+
+    .news .boxNews .boxNewsAndPromotion .boxImageNews,
+    .news .boxNews .boxNewsAndPromotion .boxImagePromotion {
+        width: 42.9%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .news .boxNews .boxNewsAndPromotion .boxImageNews img,
+    .news .boxNews .boxNewsAndPromotion .boxImagePromotion img {
+        width: 100%;
+        margin-left: 18%;
+    }
+
+    .contact .boxContact input {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    .contact .boxContact .resultSendInfoUser p{
+        font-size: 16px;
+    }
+
+    .contact .boxContact .boxBtn button {
+        padding: 12px 55px;
+        font-size: 20px;
+        border-radius: 12px;
+        margin-top: 40px;
+
+    }
+
+    .services .boxservices .boxicon .a,
+    .services .boxservices .boxicon .b,
+    .services .boxservices .boxicon .c {
+        width: 50%;
+    }
+
+    .services .boxservices .boxicon .a p.contentIcon,
+    .services .boxservices .boxicon .b p.contentIcon,
+    .services .boxservices .boxicon .c p.contentIcon {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .services .boxservices .title p {
+        font-size: 35px;
+    }
+
+    .services .boxservices .boxicon .a p.titleIcon,
+    .services .boxservices .boxicon .b p.titleIcon,
+    .services .boxservices .boxicon .c p.titleIcon {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .portfolio .boxTitlePort .kindPorts button {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 7px 20px;
+        margin: 5px;
+    }
+
+    .footer .boxFooter .boxFooter1 {
+        flex-wrap: wrap;
+    }
+
+    .footer .boxFooter1 .content .boxContent .footerAbout,
+    .footer .boxFooter1 .content .boxContent .footerServices,
+    .footer .boxFooter1 .content .boxContent .footerPortfolio,
+    .footer .boxFooter1 .content .boxContent .footerNews,
+    .footer .boxFooter1 .content .boxContent .footerContact {
+        width: 50%;
+    }
+
+    .footer .boxFooter1 .content .boxContent p.title,
+    .footer .boxFooter1 .content .boxContent p.content {
+        font-size: 16px;
+    }
+
+    .footer .boxFooter2 .content1 p,
+    .footer .boxFooter2 .content2 p {
+        font-size: 16px;
+    }
+
+    .footer .boxFooter .boxFooter1 .image .boxImageLogo {
+        width: 160px;
+    }
+
+    .lienhe1,
+    .lienhe2,
+    .lienhe3,
+    .closeListLienhe {
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+        bottom: 20px;
+        right: 18px;
+    }
+
+    .ring1 {
+        bottom: 20px;
+        right: 18px;
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .ring2 {
+        bottom: 20px;
+        right: 18px;
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .closeStartChat,
+    .miniChat {
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+        bottom: 20px;
+        right: 80px;
+    }
+
+    .listLienhe {
+        bottom: 80px;
+        right: 18px;
+    }
+
+    .listLienhe .boxListLienhe1,
+    .listLienhe .boxListLienhe2,
+    .listLienhe .boxListLienhe3,
+    .listLienhe .boxListLienhe4 {
+        display: flex;
+        padding: 5px 8px;
+    }
+
+    .listLienhe .boxListLienhe1 .icon,
+    .listLienhe .boxListLienhe2 .icon,
+    .listLienhe .boxListLienhe3 .icon,
+    .listLienhe .boxListLienhe4 .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .listLienhe .boxListLienhe1 .content p,
+    .listLienhe .boxListLienhe2 .content p,
+    .listLienhe .boxListLienhe3 .content p,
+    .listLienhe .boxListLienhe4 .content p {
+        padding-left: 8px;
+        padding-right: 20px;
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 4px;
+    }
+
+    .listLienhe .boxListLienhe4 .content p {
+        line-height: 23px;
+    }
+
+    .formchat {
+        width: 355px;
+        height: 465px;
+        bottom: 80px;
+        right: 10px;
+    }
+
+    .formchat .contentChat {
+        width: 100%;
+        height: 350px;
+        padding: 0px 18px;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        vertical-align: top;
+        overflow-y: auto;
+
+    }
+
+    .formchat .contentChat .left {
+        width: 100%;
+        border-radius: 5px;
+        float: left;
+        margin: 0px 0px 8px;
+    }
+
+    .formchat .contentChat .left p.content {
+        font-size: 13px;
+        word-wrap: break-word;
+    }
+
+    .formchat .contentChat .right p.content {
+        font-size: 13px;
+        word-wrap: break-word;
+    }
+
+    .formchat .contentChat .right p.content a{
+        word-wrap: break-word;
+    }
+
+    .formchat .contentChat .right .image-chat {
+        width: 60%;
+    }
+
+    .formchat .contentChat .left .image-chat {
+        width: 60%;
+    }
+
+    .formchat .input-chat {
+        box-sizing: border-box;
+        padding: 8px 5px;
+        display: flex;
+    }
+
+    .formchat .input-chat input[type="file"] {
+        display: none;
+    }
+
+    .formchat .input-chat textarea {
+        border: none;
+        width: 100%;
+        height: 41px;
+        padding: 7px 18px;
+        border-radius: 20px;
+        background-color: rgb(240, 240, 240);
+        word-wrap: break-word;
+        resize: none;
+        overflow: auto;
+        outline: none;
+        font-family: "Poppins-Regular";
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    .formchat .input-chat img.ghim {
+        width: 22px;
+        height: 23px;
+        margin: 8px 5px;
+    }
+
+    .formchat .input-chat img.send {
+        width: 25px;
+        height: 21px;
+        margin: 9px 5px;
+    }
+
+    .formchat .input-chat img.ghim:hover,
+    .formchat .input-chat img.send:hover {
+        cursor: pointer;
+    }
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    .about .titleAbout .boxtitleAbout .a p {
+        font-size: 90px;
+        line-height: 64px;
+    }
+
+    .about .titleAbout .boxtitleAbout .b p {
+        font-size: 28px;
+        padding-top: 96px;
+    }
+
+    .about .contentAbout p.a,
+    .about .contentAbout p.b,
+    .about .contentAbout p.c {
+        font-size: 14px;
+    }
+
+    .about .titleAbout .boxtitleAbout .a .line {
+        height: 70px;
+        margin-left: 32px;
+    }
+
+    .services .boxservices .title {
+        padding-bottom: 10px;
+    }
+
+    .services .boxservices .title p,
+    .contact .boxContact p,
+    .portfolio .boxTitlePort p {
+        font-size: 30px;
+    }
+
+    .services .boxservices .boxicon .a p.titleIcon,
+    .services .boxservices .boxicon .b p.titleIcon,
+    .services .boxservices .boxicon .c p.titleIcon {
+        font-size: 19px;
+        margin-top: 10px;
+    }
+
+
+    .services .boxservices .boxicon .a p.contentIcon,
+    .services .boxservices .boxicon .b p.contentIcon,
+    .services .boxservices .boxicon .c p.contentIcon {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .services .boxservices .boxicon .boximage img {
+        width: 70px;
+    }
+
+    .portfolio .buttonAllProjects a button {
+        width: 155px;
+        height: 50px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-prev,
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-next {
+        width: 35px;
+        height: 35px;
+        margin: 25px 10px;
+    }
+
+    .news .boxNews img {
+        width: 157.7%;
+        transform: translateX(-18.4%);
+    }
+
+    .news .boxNews .boxNewsAndPromotion {
+        padding: 0px 7%;
+        padding-right: 6.5%;
+        top: 26.46%;
+    }
+
+    .news .boxNews .boxNewsAndPromotion .boxImageNews,
+    .news .boxNews .boxNewsAndPromotion .boxImagePromotion {
+        width: 42.9%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .news .boxNews .boxNewsAndPromotion .boxImageNews img,
+    .news .boxNews .boxNewsAndPromotion .boxImagePromotion img {
+        width: 100%;
+        margin-left: 18%;
+    }
+
+    .contact .boxContact input {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .contact .boxContact .resultSendInfoUser p{
+        font-size: 15px;
+    }
+
+    .contact .boxContact .boxBtn button {
+        padding: 12px 50px;
+        font-size: 18px;
+        border-radius: 12px;
+        margin-top: 35px;
+
+    }
+
+
+    .portfolio .boxTitlePort .kindPorts button {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 7px 20px;
+        margin: 5px;
+    }
+
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .footer .boxFooter .boxFooter1 {
+        flex-wrap: wrap;
+    }
+
+    .footer .boxFooter1 .content .boxContent .footerAbout,
+    .footer .boxFooter1 .content .boxContent .footerServices,
+    .footer .boxFooter1 .content .boxContent .footerPortfolio,
+    .footer .boxFooter1 .content .boxContent .footerNews,
+    .footer .boxFooter1 .content .boxContent .footerContact {
+        width: 50%;
+    }
+
+    .footer .boxFooter1 .content .boxContent p.title,
+    .footer .boxFooter1 .content .boxContent p.content {
+        font-size: 15px;
+    }
+
+    .footer .boxFooter2 .content1 p,
+    .footer .boxFooter2 .content2 p {
+        font-size: 15px;
+    }
+
+    .footer .boxFooter .boxFooter1 .image .boxImageLogo {
+        width: 140px;
+    }
+
+}
+
+@media screen and (max-width: 549px) {
+    .about .titleAbout .boxtitleAbout .a p {
+        font-size: 90px;
+        line-height: 64px;
+    }
+
+    .about .titleAbout .boxtitleAbout .b p {
+        font-size: 28pt;
+        padding-top: 96px;
+    }
+
+    .about .contentAbout p.a,
+    .about .contentAbout p.b,
+    .about .contentAbout p.c {
+        font-size: 13px;
+    }
+
+    .about .titleAbout .boxtitleAbout .a .line {
+        height: 70px;
+        margin-left: 32px;
+    }
+
+    .services .boxservices .title p,
+    .contact .boxContact p,
+    .portfolio .boxTitlePort p {
+        font-size: 30px;
+    }
+
+    .portfolio .buttonAllProjects a button {
+        width: 155px;
+        height: 50px;
+        border-radius: 8px;
+        font-size: 18px;
+        margin-top: 17px;
+    }
+
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-prev,
+    .portfolio .boxContentPort .boxSlideImagePort .owl-carousel .owl-next {
+        width: 35px;
+        height: 35px;
+        margin: 25px 10px;
+    }
+
+    .news .boxNews img {
+        width: 157.7%;
+        transform: translateX(-18.4%);
+    }
+
+    .news .boxNews .boxNewsAndPromotion {
+        padding: 0px 7%;
+        padding-right: 6.5%;
+        top: 26.46%;
+    }
+
+    .news .boxNews .boxNewsAndPromotion .boxImageNews,
+    .news .boxNews .boxNewsAndPromotion .boxImagePromotion {
+        width: 42.9%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .news .boxNews .boxNewsAndPromotion .boxImageNews img,
+    .news .boxNews .boxNewsAndPromotion .boxImagePromotion img {
+        width: 100%;
+        margin-left: 18%;
+    }
+
+    .contact .boxContact input {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .contact .boxContact .boxBtn button {
+        padding: 12px 45px;
+        font-size: 18px;
+        border-radius: 12px;
+        margin-top: 35px;
+
+    }
+
+    .services .boxservices .title {
+        padding-bottom: 0px;
+    }
+
+    .services .boxservices .boxicon .a p.titleIcon,
+    .services .boxservices .boxicon .b p.titleIcon,
+    .services .boxservices .boxicon .c p.titleIcon {
+        font-size: 17px;
+        margin-top: 10px;
+    }
+
+    .services .boxservices .boxicon .a p.contentIcon,
+    .services .boxservices .boxicon .b p.contentIcon,
+    .services .boxservices .boxicon .c p.contentIcon {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .services .boxservices .boxicon .boximage img {
+        width: 60px;
+    }
+
+    .portfolio .boxTitlePort .kindPorts button {
+        font-size: 13px;
+        line-height: 10px;
+        padding: 5px 3px;
+        margin: 5px;
+    }
+
+    .footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer .boxFooter .boxFooter1 {
+        flex-wrap: wrap;
+    }
+
+    .footer .boxFooter1 .content .boxContent .footerAbout,
+    .footer .boxFooter1 .content .boxContent .footerServices,
+    .footer .boxFooter1 .content .boxContent .footerPortfolio,
+    .footer .boxFooter1 .content .boxContent .footerNews,
+    .footer .boxFooter1 .content .boxContent .footerContact {
+        width: 100%;
+    }
+
+    .footer .boxFooter1 .content .boxContent p.title,
+    .footer .boxFooter1 .content .boxContent p.content {
+        font-size: 13px;
+    }
+
+    .footer .boxFooter2 .content1 p,
+    .footer .boxFooter2 .content2 p {
+        font-size: 12px;
+    }
+
+    .footer .boxFooter .boxFooter1 .image .boxImageLogo {
+        width: 120px;
+    }
+}
+
+
+@font-face {
+    src: url(Font/Poppins-Black.ttf);
+    font-family: Poppins-Black;
+}
+
+@font-face {
+    src: url(Font/Poppins-BoldItalic.ttf);
+    font-family: Poppins-BoldItalic;
+}
+
+@font-face {
+    src: url(Font/Poppins-Bold.ttf);
+    font-family: Poppins-Bold;
+}
+
+@font-face {
+    src: url(Font/Poppins-BoldItalic.ttf);
+    font-family: Poppins-BoldItalic;
+}
+
+@font-face {
+    src: url(Font/Poppins-ExtraBold.ttf);
+    font-family: Poppins-ExtraBold;
+}
+
+@font-face {
+    src: url(Font/Poppins-ExtraBoldItalic.ttf);
+    font-family: Poppins-ExtraBoldItalic;
+}
+
+@font-face {
+    src: url(Font/Poppins-ExtraBold.ttf);
+    font-family: Poppins-ExtraBold;
+}
+
+@font-face {
+    src: url(Font/Poppins-ExtraLight.ttf);
+    font-family: Poppins-ExtraLight;
+}
+
+@font-face {
+    src: url(Font/Poppins-ExtraLightItalic.ttf);
+    font-family: Poppins-ExtraLightItalic;
+}
+
+@font-face {
+    src: url(Font/Poppins-Italic.ttf);
+    font-family: Poppins-Italic;
+}
+
+@font-face {
+    src: url(Font/Poppins-Light.ttf);
+    font-family: Poppins-Light;
+}
+
+@font-face {
+    src: url(Font/Poppins-LightItalic.ttf);
+    font-family: Poppins-LightItalic;
+}
+
+@font-face {
+    src: url(Font/Poppins-Medium.ttf);
+    font-family: Poppins-Medium;
+}
+
+@font-face {
+    src: url(Font/Poppins-MediumItalic.ttf);
+    font-family: Poppins-MediumItalic;
+}
+
+@font-face {
+    src: url(Font/Poppins-Regular.ttf);
+    font-family: Poppins-Regular;
+}
+
+@font-face {
+    src: url(Font/Poppins-SemiBold.ttf);
+    font-family: Poppins-SemiBold;
+}
+
+
+@font-face {
+    src: url(Font/Poppins-SemiBoldItalic.ttf);
+    font-family: Poppins-SemiBoldItalic;
+}
+
+@font-face {
+    src: url(Font/Poppins-Thin.ttf);
+    font-family: Poppins-Thin;
+}
+
+@font-face {
+    src: url(Font/Poppins-ThinItalic.ttf);
+    font-family: Poppins-ThinItalic;
+}
