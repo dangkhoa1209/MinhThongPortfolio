@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Minh Thong Designer | Message</title>
+    <link rel="stylesheet" type="text/css" href="/css/message.css">
+    <script type="text/javascript" src="/js/message.js"></script>
+    <!--Font v5-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="index">
+        <div class="userchat">
+            <div class="nav">
+                <div class="a">
+                    <p>Chat</p>
+                </div>
+                <div class="b">
+                    <div class="b1">
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="find" class="find">
+                <div class="a">
+                    <div class="a1">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input id="finduser" type="text" placeholder="Find user">
+                </div>
+            </div>
+            <div class="users">
+                <% boxchats.forEach(function(boxchat){ %> 
+                    <div class="user" id="<%= boxchat.email %>" data-name="<%= boxchat.name %>" data-email="<%= boxchat.email %>" data-phone="<%= boxchat.phone %>">
+                        <div class="username">
+                            <h5><%= boxchat.name %></h5>
+                        </div>
+                        <% if(boxchat.status == "seen"){ %>
+                            <div class="contentandtime">
+                                <div class="content">
+                                    <p><%= boxchat.lastmessage %></p>
+                                </div>
+                                <div class="time">
+                                    <p><%= boxchat.lasttime %></p>
+                                </div>
+                            </div>
+                        <% }else{ %>
+                            <div class="contentandtime notseen">
+                                <div class="content">
+                                    <p><%= boxchat.lastmessage %></p>
+                                </div>
+                                <div class="time">
+                                    <p><%= boxchat.lasttime %></p>
+                                </div>
+                            </div>
+                        <% } %> 
+                    </div>
+                <% }) %> 
+            </div>
+        </div>
+        <div class="boxchat">
+            <div id="boxchatNameUser" class="name">
+                <!-- Box chat -->
+            </div>
+            <div class="content-chat">
+                <!-- Content chat -->
+            </div>
+            <div class="input-chat">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-paperclip item-chat"></i>
+                </label>
+                <input id="file-upload" type="file" multiple="multiple"/>
+                <textarea id="inputmessage" rows="1" placeholder="Enter your message here..."></textarea>
+                <i class="fa fa-paper-plane send-chat" data-email="" data-name="" data-phone=""></i>
+            </div>
+        </div>
+        <div class="infousers">
+            <div class="infouser">
+                   
+            </div>
+            <div class="imageandfile">
+                <div class="image-btn">
+                    <p>Image</p>
+                </div>
+                <div class="file-btn">
+                    <p>Files</p>
+                </div>
+            </div>
+            <div class="images">
+                <!--List images-->
+            </div>
+            <div class="files">
+                <!--List files-->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Minh Thong Portfolio</title>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <!--animate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <!--JS-->
+    <script type="text/javascript" src="/js/wow.js"></script>
+    <script type="text/javascript" src="/js/home.js"></script>
+    <!--Icon-->
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--Socket io-->
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="index" class="index">
+         <!--Modal login-->
+        <div id="LoginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <form action="" id="formLogin">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <input id="username" type="username" placeholder="Username">
+                            <input id="pwd" type="password" placeholder="Password">
+                        </div>
+                        <div class="modal-body" id="errorLogin">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="close-modal" type="button" data-dismiss="modal">Close</button>
+                            <button class="btnlogin">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--Header-->
+        <div class="header" id="header">
+            <div class="boxheader wow fadeInDown" data-wow-delay="1s" id="boxheader">
+                <a class="logo" href="#"><img class="img-logo" src="/imagesSystem/logo/<%= infohome.logo %>" alt="Logo"></a>
+                <nav>
+                    <ul class="header-links">
+                        <li><a class="link-home linkHeaderActive" href="#">
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li><a class="link-about" href="#">
+                                <p>About Me</p>
+                            </a>
+                        </li>
+                        <li><a class="link-service" href="#">
+                                <p>Services</p>
+                            </a>
+                        </li>
+                        <li><a class="link-portfolio" href="#">
+                                <p>Portfolio</p>
+                            </a>
+                        </li>
+                        <li><a class="link-new" href="#">
+                                <p>News</p>
+                            </a>
+                        </li>
+                        <li><a class="link-contact" href="#">
+                                <p>Contact</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="link-user" href="#">
+                                <p><i id="icon-user" class="fa fa-user"></i></p>
+                            </a>
+                            <ul class="menu_down" id="menu_down">
+                                <% if(!admin){ %> 
+                                    <li data-toggle="modal" data-target="#LoginModal"><a href="#"><p>Login</p></a></li>
+                                <% }else{ %> 
+                                    <li><a href="/editpage" target="_blank"><p>Edit Page</p></a></li>
+                                    <li><a href="/messagepage" target="_blank"><p>Messager</p></a></li>
+                                    <li><a href="/logout"><p>Logout</p></a></li>
+                                <% } %> 
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="menu cta"><i class="fa fa-bars" aria-hidden="true"></i></i></p>
+            </div>
+        </div>
+        <!--Header Mobile-->
+        <div id="mobile__menu" class="overlay">
+            <a class="close" id="close-menu-mb">&times;</a>
+            <div class="overlay__content">
+                <a class="link-home link-home-mb linkHeaderActive" href="#">Home</a>
+                <a class="link-about link-about-mb" href="#">About</a>
+                <a class="link-service link-service-mb" href="#about">Services</a>
+                <a class="link-portfolio link-portfolio-mb" href="#portfolio">Portfolio</a>
+                <a class="link-new link-new-mb" href="#">News</a>
+                <a class="link-contact link-contact-mb" href="#">Contact</a>
+                <% if(!admin){ %> 
+                    <a class="link-login-logout-mb" href="#" data-toggle="modal" data-target="#LoginModal">Login</a>
+                <% }else{ %> 
+                    <a class="link-mess-mb" href="message-management.html" target="_blank">Messager</a>
+                    <a class="link-login-logout-mb" href="/logout">Logout</a>
+                <% } %> 
+            </div>
+        </div>
+        <!--Banner - Home-->
+        <div class="banner" id="banner">
+            <div class="boxbanner" id="boxbanner">
+                <% if(infohome.kindBanner == "image"){ %> 
+                    <img class="" src="/imagesSystem/banner/<%= infohome.banner %>" alt="Banner">
+                <% }else{ %> 
+                    <video class="videoBanner" autoplay loop muted playsinline>
+                        <source src="/imagesSystem/banner/<%= infohome.banner %>" id="videologo" class="image">
+                        Your browser does not support HTML5 video.
+                    </video>
+                <% } %>
+            </div>
+        </div>
+        <!--About me-->
+        <div class="about" id="about">
+            <div class="titleAbout wow fadeInLeft">
+                <div class="boxtitleAbout">
+                    <div class="a">
+                        <div class="line"></div>
+                        <p>A</p>
+                    </div>
+                    <div class="b">
+                        <p>BOUT ME</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contentAbout wow fadeInRight">
+                <p class="a">____</p>
+                <p class="b"><%= infohome.contentAbout %></p>
+                <p class="c"><%= infohome.titleAbout %></p>
+            </div>
+        </div>
+        <!--Services-->
+        <div class="services" id="services">
+            <div class="boxservices" id="boxservices">
+                <div class="title">
+                    <p>SERVICES</p>
+                </div>
+                <div class="boxicon">
+                    <div class="a wow fadeInUp" id="graphic">
+                        <div class="boximage">
+                            <img src="/imagesSystem/services/Asset 28ICONC.svg" alt="">
+                        </div>
+                        <p class="titleIcon">
+                            GRAPHIC DESIGN
+                        </p>
+                        <hr>
+                        <p class="contentIcon">Brand Identity, Logo , Packaging<br>Brochure, Catalogue, Profile<br>Poster, Banner, Standee<br>Business presentation<br>Other Products</p>
+                    </div>
+                    <div class="b wow fadeInUp" data-wow-delay="0.5s" id="web">
+                        <div class="boximage">
+                            <img src="/imagesSystem/services/Asset 29ICONC.svg" alt="">
+                        </div>
+                        <p class="titleIcon">
+                            WED DESIGN
+                        </p>
+                        <hr>
+                        <p class="contentIcon">Website UI/UX design<br>Progressive Web Apps<br>Landing pages<br>Promo pages<br>Support</p>
+                    </div>
+                    <div class="c wow fadeInUp" data-wow-delay="1s" id="edit">
+                        <div class="boximage">
+                            <img src="/imagesSystem/services/Asset 30ICONC.svg" alt="">
+                        </div>
+                        <p class="titleIcon">
+                            EDIT VIDEO
+                        </p>
+                        <hr>
+                        <p class="contentIcon">2D Animation & 3D Animation<br>Company introduction video<br>Product promotional video<br>Vlog , Youtube, Tiktok<br>Other Videos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Portfolio-->
+        <div class="portfolio wow fadeInUp" id="portfolio">
+            <div class="boxTitlePort" id="boxTitlePort">
+                <p>Portfolio</p>
+                <div class="kindPorts">
+                    <button class="btnKindPorts kindPortActive" data-port="all">All</button>
+                    <button class="btnKindPorts" data-port="logo">Logo</button>
+                    <button class="btnKindPorts" data-port="website">Website</button>
+                    <button class="btnKindPorts" data-port="packaging">Packaging</button>
+                    <button class="btnKindPorts" data-port="posterandbanner">Poster - Banner</button>
+                    <button class="btnKindPorts" data-port="BCP">Brochure - Catalogue - Profile</button>
+                    <button class="btnKindPorts" data-port="otherproduct">Other products</button>
+                </div>
+            </div>
+            <div class="boxContentPort" id="boxContentPort">
+                <div class="boxSlideImagePort" id="boxSlideImagePort">
+                    <div class="vongcung">
+                    </div>
+                    <div class="owl-carousel owl-theme">
+                        <% portfolios.forEach(function(port){ %> 
+                            <div class="item">
+                                <img src="/images/<%= port.image %>" alt="Portfolio">
+                            </div>
+                        <% }) %> 
+                    </div>
+                    <div class="boxDivLeftRight">
+                        <div class="divleft">
+                        </div>
+                        <div class="divright">
+                        </div>
+                    </div>
+                    <div class="vongcung2">
+                    </div>
+                </div>
+            </div>
+            <!--Button all projects-->
+            <div class="buttonAllProjects">
+                <a href="/portfolios" target="_blank">
+                    <button>All ProJects <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                </a>
+            </div>
+        </div>
+        <!--News-->
+        <% var index = 0 %> 
+        <div class="news" id="news">
+            <div class="boxNews wow fadeInUp" id="boxNews">
+                <img class="imageBackgroundTmp" src="/imagesSystem/news/two poster.png" alt="News">
+                <img class="imageBackground" id="imageBackground" src="/imagesSystem/news/two poster.png" alt="News">
+                <div class="boxNewsAndPromotion" id="boxNewsAndPromotion">
+                    <div class="boxImageNews" id="boxImageNews">
+                        <!--<img src="images/n3.jpg" alt="">-->
+                        <div class="poster">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <% index = 0 %> 
+                                    <% newproducts.forEach(function(newproduct){ %> 
+                                        <% if(index == 0){ %> 
+                                            <div class="item active">
+                                                <img src="/images/<%= newproduct.image %>" alt="New Product">
+                                            </div>
+                                        <% }else{ %>
+                                            <div class="item">
+                                                <img src="/images/<%= newproduct.image %>" alt="New Product">
+                                            </div>
+                                        <% } %>
+                                        <% index = index + 1 %> 
+                                    <% }) %> 
+                                </div>
+                                <!-- Left and right controls -->
+                                <a class="btnleft left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="btnright right carousel-control" href="#myCarousel" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxImagePromotion" id="boxImagePromotion">
+                        <!--<img src="images/n3.jpg" alt="">-->
+                        <div class="poster">
+                            <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <% index = 0 %> 
+                                    <% promotions.forEach(function(promotion){ %> 
+                                        <% if(index == 0){ %> 
+                                            <div class="item active">
+                                                <img src="/images/<%= promotion.image %>" alt="Promotion">
+                                            </div>
+                                        <% }else{ %>
+                                            <div class="item">
+                                                <img src="/images/<%= promotion.image %>" alt="Promotion">
+                                            </div>
+                                        <% } %>
+                                        <% index = index + 1 %> 
+                                    <% }) %> 
+                                </div>
+                                <!-- Left and right controls -->
+                                <a class="btnleft left carousel-control" href="#myCarousel2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="btnright right carousel-control" href="#myCarousel2" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contact-->
+        <div class="contact" id="contact">
+            <div class="boxContact wow fadeInUp" id="boxContact">
+                <p>Contact me</p>
+                <form action="">
+                    <input type="text" id="nameContact" placeholder="Your Name*">
+                    <input type="email" id="emailContact" placeholder="Your Email*">
+                    <input type="tel" id="phoneContact" placeholder="Your Phone">
+                    <input type="text" id="titleContact" placeholder="Title">
+                    <input type="text" id="messageContact" placeholder="Your Message">
+                    <div class="resultSendInfoUser"></div>
+                    <div class="boxBtn">
+                        <button class="btnSendInfoUser">SEND</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--Footer-->
+        <div class="footer">
+            <div class="boxFooter" id="boxFooter">
+                <div class="boxFooter1">
+                    <div class="image">
+                        <div class="boxImageLogo">
+                            <img src="/imagesSystem/logo/logo trang.svg" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="boxContent">
+                            <div class="footerAbout">
+                                <p class="title">About me</p>
+                                <p class="content linkFooter" data-link="about">About me</p>
+                            </div>
+                            <div class="footerServices">
+                                <p class="title">Services</p>
+                                <p class="content linkFooter" data-link="graphic">Graphic Design</p>
+                                <p class="content linkFooter" data-link="web">Web Design</p>
+                                <p class="content linkFooter" data-link="edit">Edit Video</p>
+                            </div>
+                            <div class="footerPortfolio">
+                                <p class="title">PORTFOLIO</p>
+                                <p class="content linkFooter" data-link="allprojects">All Projects</p>
+                            </div>
+                            <div class="footerNews">
+                                <p class="title">News</p>
+                                <p class="content linkFooter"  data-link="newproducts">New Products</p>
+                                <p class="content linkFooter"  data-link="promotion">Promotion</p>
+                            </div>
+                            <div class="footerContact">
+                                <p class="title">Contact</p>
+                                <p class="content">Kakao: <%= information.kakaocontact %></p>
+                                <p class="content">Phone: <%= information.phonecontact %></p>
+                                <p class="content">Email: <%= information.emailcontact %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="boxFooter2">
+                    <div class="content1">
+                        <p>Let’s build something great together</p>
+                    </div>
+                    <div class="content2">
+                        <p><i class="fa fa-copyright" aria-hidden="true"></i> ThongRetina 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Button Lien He-->
+        <div class="ring1"></div>
+        <div class="ring2"></div>
+        <div class="lienhe1" onclick="getListContact()">
+            <div class="boxLienhe1">
+                <img class="iconBaGach" src="/imagesSystem/buttonContact/Asset bagach.svg" alt="iconBaGach">
+            </div>
+        </div>
+        <div class="lienhe3" onclick="getListContact()">
+            <div class="boxLienhe3">
+                <img class="iconLienHe" src="/imagesSystem/buttonContact/Asset 1call.svg" alt="iconLienHe">
+                <img class="iconLienHe" src="/imagesSystem/buttonContact/Asset 2kakao.svg" alt="iconLienHe">
+                <img class="iconLienHe" src="/imagesSystem/buttonContact/Asset 3email.svg" alt="iconLienHe">
+                <img class="iconLienHe" src="/imagesSystem/buttonContact/Asset 4mess.svg" alt="iconLienHe">
+            </div>
+        </div>
+        <div class="lienhe2" onclick="getListContact()">
+            <div class="boxLienhe2">
+                <img class="iconVongTron" src="/imagesSystem/buttonContact/Asset vongtron.svg" alt="iconVongTron">
+            </div>
+        </div>
+        <div class="closeListLienhe" onclick="getListContact()">
+            <div class="boxCloseListLienhe">
+                <img class="iconClose" src="/imagesSystem/buttonContact/Asset close.svg" alt="iconClose">
+            </div>
+        </div>
+        <div class="closeStartChat">
+            <div class="boxCloseStartChat">
+                <img class="iconClose" src="/imagesSystem/buttonContact/Asset close.svg" alt="iconClose">
+            </div>
+        </div>
+        <div class="miniChat">
+            <div class="boxMiniChat">
+                <img class="iconMiniChat" src="/imagesSystem/boxchat/minichat.svg" alt="MiniChat">
+            </div>
+        </div>
+        <!--Form list lien he-->
+        <div class="listLienhe">
+            <div class="boxListLienhe1 startCall" data-phone="<%= information.phonecontact %>">
+                <div class="icon">
+                    <img src="/imagesSystem/listContact/phone.svg" alt="Call">
+                </div>
+                <div class="content">
+                    <p>Direct Call<br><%= information.phonecontact %></p>
+                </div>
+            </div>
+            <div class="boxListLienhe2 startKakao" data-kakao="<%= information.kakaocontact %>">
+                <div class="icon">
+                    <img src="/imagesSystem/listContact/kakao.svg" alt="Kakao">
+                </div>
+                <div class="content">
+                    <p>Contact me by KakaoTalk<br><%= information.kakaocontact %></p>
+                </div>
+            </div>
+            <div class="boxListLienhe3 startEmail" data-email="<%= information.emailcontact %>">
+                <div class="icon">
+                    <img src="/imagesSystem/listContact/email.svg" alt="Email">
+                </div>
+                <div class="content">
+                    <p>Send inquiry directly by email<br><%= information.emailcontact %></p>
+                </div>
+            </div>
+            <div class="boxListLienhe4 startChat" data-emailguest="<%= guest %>">
+                <div class="icon">
+                    <img src="/imagesSystem/listContact/chat.svg" alt="Chat">
+                </div>
+                <div class="content">
+                    <p>Chat with me now</p>
+                </div>
+            </div>
+        </div>
+        <!--Form Chat-->
+        <div class="formchat">
+            <div class="headerChat">
+                <p class="title" id="titleFormChat">Let’s chat? - Online</p>
+                <p class="closeChat"><i class="fa fa-times btnCloseChat" aria-hidden="true"></i></p>
+            </div>
+            <div class="contentChat" id="contentChat">
+                <!--Get infor chat-->
+                <!--<p class="getInfoChat">Hi! Please fill in some info below<br>to start chattting me</p>
+                <input class="getInfoChat nameInfoChat" type="text" placeholder="Your Name">
+                <input class="getInfoChat emailInfoChat" type="email" placeholder="Your Email">
+                <button class="getInfoChat sendInfoChat" onclick="sendInfoChat()">Start chat</button>
+                -->
+                <!--Content infor chat-->
+                <!--
+                <div class="left">
+                    <p class="content"> tao la khoa</p>
+                </div>
+                <div class="right">
+                    <p class="content">Xin chao</p>
+                </div>
+                <div class="left">
+                    <p class="content">If you need to design or editing If you need to design or editing dgfg dfgd fdg</p>
+                </div>
+                <div class="right">
+                    <p class="content">If you need to design or editing dgfg dfgd fdg</p>
+                </div>
+                <div class="right">
+                    <p class="content">If you need to design or editing dgfg dfgd fdg</p>
+                </div>
+                <div class="right">
+                    <p class="content">If you need to design or editing dgfg dfgd fdg</p>
+                </div>
+                <div class="left">
+                    <p class="content">Hi!</p>
+                </div>
+                <div class="right">
+                    <p class="content">Xin chao</p>
+                </div>
+                <div class="left">
+                    <p class="content">If you need to design or editing</p>
+                </div>
+                <div class="time">
+                    <p>17:30, 31/7/2021</p>
+                </div>
+                <div class="right">
+                    <div class="image-chat">
+                        <img src="https://anhdep123.com/wp-content/uploads/2021/02/hinh-nen-gai-xinh-full-hd-cho-dien-thoai.jpg" alt="">
+                    </div>
+                </div>
+                <div class="left">
+                    <p class="content">
+                        <a class="content" href="call.css" target="_blank">home.html</a>
+                    </p>
+                </div>
+                <div class="right">
+                    <p class="content">
+                        <a class="content" href="call.css" target="_blank">home.html</a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="image-chat">
+                        <img src="https://danongonline.com.vn/wp-content/uploads/2018/02/anh-girl-xinh-9-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="image-chat">
+                        <img src="https://uploads-ssl.webflow.com/5f5f2b58b1af780151375838/60691912771a1a1fc8aca54a_anh-girl-xinh-facebook-khoe-hang.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="content">If you need to design or editing, please contact me immediately</p>
+                </div>
+                -->
+            </div>
+            <div class="sendChat input-chat">
+                <label for="file-upload" class="custom-file-upload">
+                    <img class="ghim" src="/imagesSystem/boxchat/Asset Ghim.png" alt="Ghim">
+                </label>
+                <input id="file-upload" type="file" multiple="multiple"/>
+                <textarea id="conctentMessage" rows="1" placeholder="Type a message..."></textarea>
+                <img class="send" src="/imagesSystem/boxchat/Asset Send.png" id="sendMessage" data-email="<%= guest %>" alt="Send">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    new WOW().init();
+</script>
+</html>

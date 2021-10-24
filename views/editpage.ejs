@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/editpage.css" />
+    <!--JS-->
+    <script type="text/javascript" src="/js/editpage.js"></script>
+    <!--Icon-->
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Thong Retina | Edit</title>
+</head>
+
+<body>
+    <div id="index" class="index">
+        <div id="header">
+            <a class="logo" href="#"><img class="img-logo" src="/imagesSystem/logo/<%= infohome.logo %>" alt="logo" /></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a class="link-about underline" href="#">About</a></li>
+                    <li><a class="link-banner" href="#">Banner</a></li>
+                    <li><a class="link-portfolio" href="#">Portfolio</a></li>
+                    <li><a class="link-news" href="#">News</a></li>
+                    <li><a class="link-info" href="#">Information</a></li>
+                    <li><a class="link-reset" href="#">Reset</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--Edit About and Logo-->
+        <div class="editabout">
+            <div class="logo">
+                <div id="boximage" class="boximage">
+                    <img id="imageLogo" class="image" src="/imagesSystem/logo/<%= infohome.logo %>" alt="logo" />
+                </div>
+                <div class="chooseimage">
+                    <form action="" class="updateLogo">
+                        <label for="inputLogo"><i class="fa fa-picture-o" aria-hidden="true"></i> Choose
+                            Image</label>
+                        <input type="file" id="inputLogo" name="inputLogo" accept="image/*" />
+                        <div class="savelogobtn">
+                            <button class="updateLogoBtn" data-idhome="<%= infohome._id %>" data-oldlogo="<%= infohome.logo %>">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="about">
+                <form action="" id="formUpdateAbout">
+                    <div class="content">
+                        <p>Content</p>
+                        <textarea name="" id="inputContentAbout" data-oldContentAbout="<%= infohome.contentAbout %>" rows="10"><%= infohome.contentAbout %></textarea>
+                    </div>
+                    <div class="title">
+                        <p>Sologan</p>
+                        <input type="text" id="inputTitleAbout" data-oldTitleAbout="<%= infohome.titleAbout %>" value="<%= infohome.titleAbout %>" placeholder="Title" />
+                    </div>
+                    <div class="saveabout">
+                        <button id="btnUpdateAbout" data-idhome="<%= infohome._id %>">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--Edit Banner-->
+        <div class="editbanner">
+            <div class="banner">
+                <div id="boximageBanner" class="boximageBanner">
+                    <% if(infohome.kindBanner == "image"){ %> 
+                    <img id="imageLogo" class="image" src="/imagesSystem/banner/<%= infohome.banner %>" alt="Banner"/>
+                    <% }else{ %> 
+                        <video class="videoBanner" autoplay loop muted playsinline>
+                            <source src="/imagesSystem/banner/<%= infohome.banner %>" id="videologo" class="image">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    <% } %>
+                </div>
+                <div class="chooseimage">
+                    <form action="/action_page.php" id="formUpdateBanner">
+                        <label for="inputImageBanner"><i class="fa fa-picture-o" aria-hidden="true"></i> Choose Image
+                            or Video</label>
+                        <input type="file" id="inputImageBanner" name="inputImageBanner" accept="image/*, video/*" />
+                        <p style="display: none;">Title</p>
+                        <textarea style="display: none;" rows="4" id="inputTitleBanner" data-oldtitle="<%= infohome.title %>"><%= infohome.title %></textarea>
+                        <div class="savebannerbtn">
+                            <button id="btnUpdateBanner" data-idhome="<%= infohome._id %>">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Modal remove portfolio-->
+        <div class="modal fade" id="removePortfolio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Are you sure to remove this product?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button id="btnSureDeletePortfolio" data-id="" type="button" class="btn btn-primary">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Edit Portfolio-->
+        <div class="editportfolio">
+            <div class="a">
+                <div class="a1">
+                    <div id="boxImagePortfolio" class="boxImagePortfolio"></div>
+                    <div class="boxImagePortfolio">
+                        <label for="inputImgPortfolio"><i class="fa fa-picture-o" aria-hidden="true"></i> Choose Image</label>
+                    </div>
+                </div>
+                <div class="a2">
+                    <form action="" id="formUpdatePortfolio">
+                        <input type="file" id="inputImgPortfolio" name="inputImgPortfolio" accept="image/*" />
+                        <!--<p>Image name</p>-->
+                        <input type="text" id="inputNamePortfolio" placeholder="Image name"/>
+                        <p>Category</p>
+                        <select id="inputKindPortfolio">
+                            <option class="optionKindPortfolio optionnone" id="optionnone" disabled selected value="none"> -- category -- </option>
+                            <option class="optionKindPortfolio optionlogo" id="optionlogo" value="logo">Logo</option>
+                            <option class="optionKindPortfolio optionwebsite" id="optionwebsite" value="website">Website</option>
+                            <option class="optionKindPortfolio optionpackaging" id="optionpackaging" value="packaging">Packaging</option>
+                            <option class="optionKindPortfolio optionposterandbanner" id="optionposterandbanner" value="posterandbanner">Poster - Banner</option>
+                            <option class="optionKindPortfolio optionBCP" id="optionBCP" value="BCP">Brochure - Catalogue - Profile</option>
+                            <option class="optionKindPortfolio optionotherproduct" id="optionotherproduct" value="otherproduct">Other Products</option>
+                        </select>
+                        <!--<p>Introduce</p>-->
+                        <textarea id="inputIntroducePortfolio" rows="6"></textarea>
+                        <div class="portfoliobtn">
+                            <button id="btnSavePortfolio" data-kindbtnsave="create" data-id="" data-oldimage="" data-oldkindproduct="" data-oldintroduce="">Save</button>
+                            <button type="button" id="btnDeletePortfolio" type="button" data-toggle="modal" data-target="#removePortfolio">
+                                Delete
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="b">
+                <div class="news">
+                    <div id="newPortfolio" class="new">
+                        <p><i class="fa fa-plus-square-o" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+                <div class="images">
+                    <% portfolios.forEach(function(portfolio){%> 
+                        <div class="image imageListPortfolio port<%= portfolio._id %>" data-id="<%= portfolio._id %>" data-image="<%= portfolio.image %>" data-name="<%= portfolio.name %>" data-introduce="<%= portfolio.introduce %>" data-kindProduct="<%= portfolio.kindProduct %>">
+                            <img src="/images/<%= portfolio.image %>" alt="portfolio" />
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Modal remove new-->
+        <div class="modal fade" id="removeNews" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Are you sure to remove this news?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button id="btnSureDeleteNews" data-id="" type="button" class="btn btn-primary">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- New -->
+        <div class="editnew">
+            <div class="a">
+                <div class="a1">
+                    <div id="boxImageNews" class="boxImageNews"></div>
+                </div>
+                <div class="a2">
+                    <!-- Or -->
+                    <p>Create news (3x4)</p>
+                    <label for="inputImgNews"><i class="fa fa-picture-o" aria-hidden="true"></i> Choose
+                        Image</label>
+                    <input type="file" id="inputImgNews" name="inputImgNews" accept="image/*" />
+                    <p>Category</p>
+                    <select name="inputKindNews" id="inputKindNews">
+                        <option class="optionKindNews optionnewnone" id="optionnewnone" disabled selected> -- category -- </option>
+                        <option class="optionKindNews optionnewproduct" id="optionnewproduct" value="newproduct">New products</option>
+                        <option class="optionKindNews optionpromotion" id="optionpromotion" value="promotion">Promotion</option>
+                    </select>
+                    <div class="editnewbtn">
+                        <button class="btnCreateNew">Save</button>
+                        <button class="btnDeleteNew" data-toggle="modal" data-target="#removeNews">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="b">
+                <div class="b1">
+                    <div class="all-btn btnn" data-filter="all">
+                        <p>All</p>
+                    </div>
+                    <div class="product-btn btnn" data-filter="newproduct">
+                        <p>New Products</p>
+                    </div>
+                    <div class="promotion-btn btnn" data-filter="promotion">
+                        <p>Promotion</p>
+                    </div>
+                </div>
+                <div class="b2">
+                    <div class="imagenews btnnewNews" data-image="" data-kindNews="">
+                        <div class="newNews">
+                            <p><i class="fa fa-plus-square-o" aria-hidden="true"></i></p>
+                        </div>
+                    </div>
+                    <% listnews.forEach(function(listnew){ %> 
+                        <div class="imagenews <%= listnew.kindNews %> listnew<%= listnew._id %>" data-id="<%= listnew._id %>" data-image="<%= listnew.image %>" data-kindNews="<%= listnew.kindNews %>">
+                            <img src="/images/<%= listnew.image %>" alt="" />
+                        </div>
+                    <% }) %> 
+                </div>
+            </div>
+        </div>
+
+        <!--Information-->
+        <div class="information">
+            <div class="boxinfo">
+                <div class="a">
+                    <h5>Contact Infomation</h5>
+                    <p>Number phone: </p>
+                    <input type="text" id="phonecontact" placeholder="Number phone" value="<%= information.phonecontact %>">
+                    <p>Email: </p>
+                    <input type="email" id="emailcontact" placeholder="Email" value="<%= information.emailcontact %>">
+                    <p>Kakao Talk: </p>
+                    <input type="email" id="kakaocontact" placeholder="Kakao Talk" value="<%= information.kakaocontact %>">
+                </div>
+                <div class="b">
+                    <h5>Account email</h5>
+                    <p>Email: </p>
+                    <input type="email" id="emailemail" placeholder="Email" value="<%= information.email %>">
+                    <p>Password: </p>
+                    <input type="password" id="passwordemail" placeholder="Password email" value="<%= information.password %>">
+                </div>
+            </div>
+            <div class="boxbutton">
+                <button id="btnsaveinformation" data-phonec="<%= information.phonecontact %>" data-emailc="<%= information.emailcontact %>" data-kakaoc="<%= information.kakaocontact %>" data-email="<%= information.email %>" data-pwd="<%= information.password %>">Save</button>
+            </div>
+        </div>
+
+
+        <!--Modal reset page-->
+        <div class="modal fade" id="ResetPage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Reset System</h4>
+                        <p>Tất cả thông tin khách hàng, tin nhắn, hình ảnh, file sẽ được xoá hệ thống</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button id="btnSureReset" data-id="" type="button" class="btn btn-primary">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Reset page-->
+        <div class="reset">
+            <div class="a">
+                <div class="a1">
+                    <button type="button" data-toggle="modal" data-target="#ResetPage">System Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
