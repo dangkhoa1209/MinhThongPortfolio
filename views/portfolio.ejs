@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Minh Thong | Portfolio</title>
+	<!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/portfolio.css">
+    <!--JS-->
+    <script type="text/javascript" src="js/portfolio.js"></script>
+    <!--Icon-->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="index" id="header">
+		<!--Header-->
+        <div class="header" id="header">
+            <div class="boxheader" id="boxheader">
+                <a class="logo" href="#"><img class="img-logo" src="imagesSystem/logo/<%= infohome.logo %>" alt="logo"></a>
+                <nav>
+                    <ul class="header-links">
+                        <li><a class="link-home" href="#">
+                                <p>Home</p>
+                            </a></li>
+                        <li><a class="link-about" href="#">
+                                <p>About Me</p>
+                            </a></li>
+                        <li><a class="link-service" href="#">
+                                <p>Services</p>
+                            </a></li>
+                        <li><a class="link-portfolio linkHeaderActive" href="#">
+                                <p>Portfolio</p>
+                            </a></li>
+                        <li><a class="link-new" href="#">
+                                <p>News</p>
+                            </a></li>
+                        <li><a class="link-contact" href="#">
+                                <p>Contact</p>
+                            </a></li>
+                        <li>
+                            <a class="link-user" href="#">
+                                <p><i id="icon-user" class="fa fa-user"></i></p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="menu cta"><i class="fa fa-bars" aria-hidden="true"></i></i></p>
+            </div>
+        </div>
+        <!--Header Mobile-->
+        <div id="mobile__menu" class="overlay">
+            <a class="close" id="close-menu-mb">&times;</a>
+            <div class="overlay__content">
+                <a class="link-home link-home-mb" href="#">Home</a>
+                <a class="link-about link-about-mb" href="#">About</a>
+                <a class="link-service link-service-mb" href="#">Services</a>
+                <a class="link-portfolio link-portfolio-mb linkHeaderActive" href="#">Portfolio</a>
+                <a class="link-new link-new-mb" href="#">News</a>
+                <a class="link-contact link-contact-mb" href="#">Contact</a>
+            </div>
+        </div>
+
+        <!--Banner - Home-->
+        <div class="banner" id="banner">
+            <div class="boxbanner" id="boxbanner">
+            	<div class="content-banner">
+                    <p>My portfolio</p>
+                </div>
+                <img src="imagesSystem/banner/banner portfolio.jpg" alt="">
+            </div>
+        </div>
+
+        <!--Portfolio-->
+        <div class="portfolio">
+            <div class="boxTitlePort" id="boxTitlePort">
+                <div class="kindPorts">
+                    <button class="btnKindPorts kindPortActive" data-port="all">All</button>
+                    <button class="btnKindPorts" data-port="logo">Logo</button>
+                    <button class="btnKindPorts" data-port="website">Website</button>
+                    <button class="btnKindPorts" data-port="packaging">Packaging</button>
+                    <button class="btnKindPorts" data-port="posterandbanner">Poster - Banner</button>
+                    <button class="btnKindPorts" data-port="BCP">Brochure - Catalogue - Profile</button>
+                    <button class="btnKindPorts" data-port="otherproduct">Other products</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Image port-->
+        <div class="imagePortfolio">
+        	<div class="boxImagaPortfolio" id="boxImagaPortfolio">
+        		<!--
+        		<div class="boxImage">
+        			<img src="images/1.jpg" alt="">
+        		</div>
+                -->
+        	</div>
+        </div>
+
+        <!--switchPages-->
+        <div class="switchPage">
+            <div class="boxSwitchPage">
+                <!--
+                <button class="active">1</button>
+                <button>2</button>
+                -->
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="footer">
+            <div class="boxFooter" id="boxFooter">
+                <div class="boxFooter1">
+                    <div class="image">
+                        <div class="boxImageLogo">
+                            <img src="imagesSystem/logo/logo trang.svg" alt="Logo1">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="boxContent">
+                            <div class="footerAbout">
+                                <p class="title">About me</p>
+                                <p class="content">About me</p>
+                            </div>
+                            <div class="footerServices">
+                                <p class="title">Services</p>
+                                <p class="content">Graphic Design</p>
+                                <p class="content">Web Design</p>
+                                <p class="content">Edit Video</p>
+                            </div>
+                            <div class="footerPortfolio">
+                                <p class="title">PORTFOLIO</p>
+                                <p class="content">All Projects</p>
+                            </div>
+                            <div class="footerNews">
+                                <p class="title">News</p>
+                                <p class="content">New Products</p>
+                                <p class="content">Promotion</p>
+                            </div>
+                            <div class="footerContact">
+                                <p class="title">Contact</p>
+                                <p class="content">Kakao: thongretina95</p>
+                                <p class="content">Phone: (+84) 977 415 007</p>
+                                <p class="content">Email: thongretina1995@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="boxFooter2">
+                    <div class="content1">
+                        <p>Let’s build something great together</p>
+                    </div>
+                    <div class="content2">
+                        <p><i class="fa fa-copyright" aria-hidden="true"></i> ThongRetina 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
